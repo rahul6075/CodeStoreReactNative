@@ -5,21 +5,34 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignupScreen from './src/screens/SignupScreen/SignupScreen';
 import LoginScreen from './src/screens/LoginScreen/LoginScreen';
+import UserVerifyScreen from './src/screens/UserVerifyScreen/UserVerifyScreen';
 
-const Stack = createNativeStackNavigator();
+
+export type RootStackParamList = {
+  Home: undefined;
+  Login:  undefined;
+  Signup: undefined;
+  Verify: undefined;
+};
+
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+      <RootStack.Navigator initialRouteName='Home'>
+        <RootStack.Screen
           component={HomeScreen}
           name="Home"
           options={{headerShown: false}}
         />
-        <Stack.Screen component={SignupScreen} name="Signup" />
-        <Stack.Screen component={LoginScreen} name="Login" />
-      </Stack.Navigator>
+        <RootStack.Screen component={SignupScreen} name="Signup" 
+         options={{headerShown: false}}
+         
+        />
+        <RootStack.Screen component={LoginScreen} name="Login"  options={{headerShown: false}} />
+        <RootStack.Screen component={UserVerifyScreen} name="Verify"  options={{headerShown: false}} />
+      </RootStack.Navigator>
     </NavigationContainer>
   );
 };

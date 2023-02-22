@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     tagText:{
         paddingBottom:10,
         color:'#fff',
+        fontSize:20
         
     }
 })

@@ -11,12 +11,19 @@ import {
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './ScreenStyle';
-import JobCard from '../../components/JobCard/JobCard';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../../App';
+import {Footer, JobCard} from '../../components/index';
+import LogoName from '../../assets/images/Gandalf.svg';
+import Logo from '../../assets/images/Heading.svg';
 const image = {
   uri: 'https://images.unsplash.com/photo-1524508762098-fd966ffb6ef9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
 };
 
 export default function HomeScreen() {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const talentCardData = [
     {
       id: 1,
@@ -69,18 +76,12 @@ export default function HomeScreen() {
             <View style={styles.heroContainer}>
               <View style={styles.header}>
                 <View style={styles.headerLeft}>
-                  <Image
-                    source={require('../../assets/images/logo.png')}
-                    style={styles.logoImg}
-                  />
-                  <Image
-                    source={require('../../assets/images/name.png')}
-                    style={styles.logo}
-                  />
+                  <Logo />
+                  <LogoName width={80} height={43} />
                 </View>
-                <TouchableOpacity style={styles.headerRight}
-               
-                >
+                <TouchableOpacity
+                  style={styles.headerRight}
+                  onPress={() => navigation.navigate('Login')}>
                   <Text style={styles.headerBtn}>Login</Text>
                 </TouchableOpacity>
               </View>
@@ -94,8 +95,10 @@ export default function HomeScreen() {
                 Work with talented people at the most affordable price to get
                 the most out of your time and cost
               </Text>
-              <TouchableOpacity style={styles.heroBtn}>
-                <Text style={styles.headerBtn}>Get Started</Text>
+              <TouchableOpacity
+                style={styles.heroBtn}
+                onPress={() => navigation.navigate('Signup')}>
+                <Text style={styles.heroBtnText}>Get Started</Text>
               </TouchableOpacity>
             </View>
           </LinearGradient>
@@ -115,6 +118,10 @@ export default function HomeScreen() {
               })}
             </View>
           </View>
+        </View>
+
+        <View style={styles.footerSection}>
+          <Footer />
         </View>
       </ScrollView>
     </SafeAreaView>
