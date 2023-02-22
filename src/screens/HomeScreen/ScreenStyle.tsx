@@ -45,6 +45,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     fontFamily: 'Montserrat',
+    fontSize:16,
+    lineHeight:19
   },
   heroContent: {
     flex: 1,
@@ -53,7 +55,8 @@ const styles = StyleSheet.create({
   },
   heroHeading: {
     color: '#fff',
-    fontSize: 20,
+    fontSize:30,
+    lineHeight:36,
     fontWeight: '600',
     paddingVertical: 10,
     fontFamily: 'Montserrat',
@@ -67,12 +70,18 @@ const styles = StyleSheet.create({
   },
   heroBtn: {
     backgroundColor: '#5BBB7B',
-    width: '30%',
+    width: '45%',
     marginVertical: 20,
-    paddingVertical: 8,
+    paddingVertical: 15,
     alignItems: 'center',
-    color: '#fff',
     borderRadius: 25,
+    
+  },
+  heroBtnText:{
+    color: '#fff',
+    fontSize:18,
+    lineHeight:19,
+    fontWeight:'600'
   },
   talentSection: {
     paddingHorizontal: 25,
@@ -80,13 +89,15 @@ const styles = StyleSheet.create({
   },
   sectionHeading: {
     color: '#000000',
-    fontSize: 25,
+    fontSize: 40,
     fontWeight: '300',
+    lineHeight:49,
     marginVertical: 10,
   },
   sectiondesc: {
     color: '#000000',
-    fontSize: 15,
+    fontSize: 16,
+    lineHeight:24,
     fontWeight: '300',
     marginVertical: 5,
   },
@@ -98,6 +109,11 @@ const styles = StyleSheet.create({
     gap:5,
     marginVertical:10,
   },
+  footerSection:{
+    backgroundColor:'#05264E',
+    paddingHorizontal: 25,
+    paddingVertical:15,
+  }
 });
 
 export default styles;
