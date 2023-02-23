@@ -9,14 +9,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 1,
-    paddingVertical: 5,
+    paddingVertical: 2,
   },
   footerLink: {
-    padding: 2,
+    paddingBottom: 2,
   },
   linkText: {
     color: '#fff',
     fontSize: 13,
+    lineHeight:20,
     fontWeight: '400',
   },
   footerIcons: {

@@ -13,7 +13,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import styles from './ScreenStyle';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../../App';
+import {RootStackParamList} from '../../navigations/types';
 import {Footer, JobCard} from '../../components/index';
 import LogoName from '../../assets/images/Gandalf.svg';
 import Logo from '../../assets/images/Heading.svg';
@@ -119,7 +119,6 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-
         <View style={styles.footerSection}>
           <Footer />
         </View>
