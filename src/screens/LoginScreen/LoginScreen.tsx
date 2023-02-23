@@ -8,7 +8,7 @@ import {
 import React, {useState} from 'react';
 import styles from '../SignupScreen/SignupStyle';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../../App';
+import {RootStackParamList} from '../../navigations/types';
 import {useNavigation} from '@react-navigation/native';
 import {Checkbox} from '../../components/index';
 //Import Svgs
