@@ -4,6 +4,7 @@ export type RootStackParamList = {
   Signup: undefined;
   Verify: undefined;
   Profile: undefined;
+  AddupdateProfile: undefined | {userId: {}};
 };
 
 export type drawerParamList = {

@@ -5,17 +5,17 @@ const styles = StyleSheet.create({
     width:"100%",
     flex:1,
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    
   },
   conatiner: {
     position:'relative',
     backgroundColor: '#fff',
-    margin: 10,
     display: 'flex',
     flexDirection: 'column',
-    paddingHorizontal: 20,
-    paddingVertical: 5,
     borderColor: '#eee',
+    paddingHorizontal: 35,
+    paddingVertical: 10,
   },
   closeIcon: {
       position:'absolute',
@@ -25,6 +25,12 @@ const styles = StyleSheet.create({
       backgroundColor:'#eee',
       borderRadius:50,
 
+  },
+  failureIcon:{
+     padding:10,
+     borderColor:'red',
+     borderWidth:5,
+     borderRadius:50,
   },
   messageIcon:{
     alignItems:'center',

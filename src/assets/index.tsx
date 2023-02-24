@@ -1,0 +1,11 @@
+export {default as EditIcon} from './svgs/editicon.svg';
+export {default as EmailIcon} from './svgs/emailIcon.svg';
+export {default as NotificationIcon} from './svgs/notification.svg';
+export {default as CrossRedIcon} from './svgs/crossRed.svg';
+export {default as CrossIcon} from './svgs/cross.svg';
+export {default as CompanyIcon} from './svgs/company.svg';
+export {default as CheckIcon} from './svgs/checkIcon.svg';
+export {default as FolderIcon} from './svgs/folderIcon.svg';
+export {default as StatusIcon} from './svgs/offlineStatus.svg';
+export {default as UploadIcon} from './svgs/Upload.svg';
+export {default as CalenderIcon} from './svgs/calender.svg';
