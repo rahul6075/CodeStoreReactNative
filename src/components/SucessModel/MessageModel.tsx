@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './MessageModelStyle';
 import LinearGradient from 'react-native-linear-gradient';
 import SucessIcon from '../../assets/svgs/check.svg';
+import FalureIcon from '../../assets/svgs/crossRed.svg';
 import CrossIcon from '../../assets/svgs/cross.svg';
 import {Button} from '../index';
 interface modelProps {
@@ -23,16 +24,22 @@ const MessageModel: React.FC<modelProps> = ({
     <Modal animationType={'fade'} transparent={false} visible={visibility}>
       <View style={styles.model}>
         <LinearGradient
-          start={{x: 0.3, y: .3}}
-          end={{x: 0.3, y: 0.3}}
+          start={{x: 0.5, y: 0.5}}
+          end={{x: 0.5, y: 0.5}}
           colors={['rgba(0, 0, 0, 0.79)', 'rgba(0, 0, 0, 0.3)']}
           style={styles.model}>
           <View style={styles.conatiner}>
             <TouchableOpacity style={styles.closeIcon} onPress={closeModel}>
-              <CrossIcon width={18} height={18} />
+              <CrossIcon width={10} height={10} />
             </TouchableOpacity>
             <View style={styles.messageIcon}>
-              <SucessIcon width={60} height={60} />
+              {modelType ? (
+                <SucessIcon width={60} height={60} />
+              ) : (
+                <View style={styles.failureIcon}>
+                  <FalureIcon width={40} height={40} />
+                </View>
+              )}
             </View>
             <Text style={styles.messageText}>{modelMessage}</Text>
             <View style={styles.modelButton}>

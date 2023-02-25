@@ -13,9 +13,7 @@ import {
 import CustomDrawerMenu from './CustomDrawerMenu';
 
 // Import Icons
-
 import PasswordIcon from '../assets/svgs/pasword.svg';
-import LogoutIcon from '../assets/svgs/logout.svg';
 
 const Drawer = createDrawerNavigator<drawerParamList>();
 
@@ -25,6 +23,7 @@ const DrawerNavigation = () => {
       drawerContent={props => <CustomDrawerMenu {...props} />}
       screenOptions={{
         headerShown: false,
+
         drawerLabelStyle: {
           fontSize: 18,
           lineHeight: 20,
