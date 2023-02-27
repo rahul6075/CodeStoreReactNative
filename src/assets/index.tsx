@@ -9,3 +9,5 @@ export {default as FolderIcon} from './svgs/folderIcon.svg';
 export {default as StatusIcon} from './svgs/offlineStatus.svg';
 export {default as UploadIcon} from './svgs/Upload.svg';
 export {default as CalenderIcon} from './svgs/calender.svg';
+export {default as FilterIcon} from './svgs/filter.svg';
+export {default as SearchIcon} from './svgs/search.svg';
