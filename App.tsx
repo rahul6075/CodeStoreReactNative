@@ -1,19 +1,14 @@
 import 'react-native-gesture-handler';
 import React, {useState} from 'react';
-import {StyleSheet} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import AuthNavigater from './src/navigations/AuthNavigater';
-import DrawerNavigation from './src/navigations/DrawerNavigation';
-
+import MainScreen from './src/screens/MainScreen/MainScreen';
+import {Provider} from 'react-redux';
+import store from './src/store';
 const App = () => {
-  const [isAuthenticated, setAuthenticated] = useState<Boolean>(false);
   return (
-    <NavigationContainer>
-      <AuthNavigater />
-    </NavigationContainer>
+    <Provider store={store}>
+      <MainScreen />
+    </Provider>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;

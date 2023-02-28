@@ -41,6 +41,19 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 50,
   },
+  inputStyle:{
+    flex:0.9,
+    fontSize:18,
+    lineHeight:22,
+    fontWeight:'500',
+  },
+  searchIcon:{
+    flex:0.1,
+    padding: 8,
+    backgroundColor: '#3C65F5',
+    borderRadius: 10,
+    alignItems: 'center',
+  },
   crossIcon: {
     marginHorizontal: 5,
     backgroundColor: '#F5F5F5',
@@ -77,6 +90,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 5,
     paddingVertical: 2,
+  },
+  filterFormInputBox:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+    borderColor: '#CCCCCC',
+    borderWidth: 1,
+    marginVertical: 5,
+    borderRadius: 5,
+    paddingHorizontal: 5,
   },
   tags: {
     display: 'flex',
@@ -138,6 +161,16 @@ const styles = StyleSheet.create({
     lineHeight:20,
     fontWeight:'500'
   },
+  filterButtons:{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'center',
+   
+  },
+  cancelButtons:{
+     flex:0.45,
+     paddingHorizontal:2
+  }
 });
 
 export default styles;

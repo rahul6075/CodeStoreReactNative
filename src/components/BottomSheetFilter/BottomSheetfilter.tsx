@@ -66,7 +66,7 @@ const BottomSheetfilter: React.FC<bottomSheetFilterProps> = ({closeModel}) => {
   };
   //SEARCH
   const onSearchList = (name: string) => {
-    if (name !== '') {
+    if (!name ) {
       let tempData = data.filter(
         item => item.name.toLowerCase().indexOf(name.toLowerCase()) > -1,
       );
@@ -79,6 +79,9 @@ const BottomSheetfilter: React.FC<bottomSheetFilterProps> = ({closeModel}) => {
     let tempSkills = skills.filter(skill => skill.id != data.id);
     setSkills(tempSkills);
   };
+
+  const buttonOnPress = () => {};
+
   useEffect(() => {
     translateY.value = withTiming(-SCREEN_HEIGHT / 2);
   }, []);
@@ -92,9 +95,9 @@ const BottomSheetfilter: React.FC<bottomSheetFilterProps> = ({closeModel}) => {
             <View style={styles.buttonContainer}>
               <Text style={styles.headingText}>Filters</Text>
               <View style={styles.icons}>
-                <Pressable style={styles.checkIcon}>
+                {/* <Pressable style={styles.checkIcon}>
                   <CheckIcon width={15} height={15} />
-                </Pressable>
+                </Pressable> */}
                 <Pressable style={styles.crossIcon} onPress={closeModel}>
                   <CrossRedIcon width={15} height={15} />
                 </Pressable>
@@ -103,21 +106,25 @@ const BottomSheetfilter: React.FC<bottomSheetFilterProps> = ({closeModel}) => {
             <View style={styles.filterForm}>
               <View style={styles.filterFormElement}>
                 <Text style={styles.label}>Skills</Text>
-                <Pressable style={styles.filterFormInput} onPress={showList}>
+
+                <Pressable style={styles.filterFormInputBox} onPress={showList}>
                   <TextInput
                     placeholder="Enter the Skills..."
                     onChangeText={skillinput => {
                       onSearchList(skillinput);
                     }}
-                    onBlur={showList}
+                    onFocus={() => {
+                      setshowDataList(true);
+                    }}
+                    style={styles.inputStyle}
                   />
-                  <Pressable style={styles.checkIcon}>
+                  <Pressable style={styles.searchIcon}>
                     <SearchIcon width={20} height={20} />
                   </Pressable>
                 </Pressable>
 
                 <View style={styles.sreachList}>
-                  {data?.length > 0 && (
+                  {showDataList && (
                     <FlatList
                       data={data}
                       renderItem={({item, index}) => {
@@ -128,7 +135,6 @@ const BottomSheetfilter: React.FC<bottomSheetFilterProps> = ({closeModel}) => {
                               setSkillInput(item.name);
                               skills.push(item);
                               setData(data.filter(ele => ele.id != item.id));
-                              setSkillInput('');
                             }}>
                             <Text style={styles.title}>{item.name}</Text>
                           </TouchableOpacity>
@@ -200,6 +206,14 @@ const BottomSheetfilter: React.FC<bottomSheetFilterProps> = ({closeModel}) => {
                 <Text style={styles.label}>Hourly Rate</Text>
               </View>
             </View>
+          </View>
+          <View style={styles.filterButtons}>
+            <Pressable  style={styles.cancelButtons}>
+              <ButtonOutlined content={'Cancel'} onPress={buttonOnPress} />
+            </Pressable>
+            <Pressable style={styles.cancelButtons} onPress={closeModel}>
+              <Button content={'Apply'} onPress={closeModel} />
+            </Pressable>
           </View>
         </SafeAreaView>
       </Animated.View>
