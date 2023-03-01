@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {axiosResponseInterceptors} from './axiosInterceptors';
+
 let axiosInstance: axiosHttpsServices;
 class axiosHttpsServices {
   constructor() {

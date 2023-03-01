@@ -43,7 +43,7 @@ const MessageModel: React.FC<modelProps> = ({
             </View>
             <Text style={styles.messageText}>{modelMessage}</Text>
             <View style={styles.modelButton}>
-              <Button content={buttonText} />
+              <Button content={buttonText} onPress={closeModel} />
             </View>
           </View>
         </LinearGradient>

@@ -11,6 +11,7 @@ export {default as Profile} from './Profile/Profile'
 export {default as ProfessionalCard} from './ProfessionalCard/ProfessionalCard'
 export {default as FilterModel} from './FilterModel/FilterModel'
 export {default as BottomSheetfilter} from './BottomSheetFilter/BottomSheetfilter'
+export {default as ToastMessage} from './ToastMessage/ToastMessage'
 
 
 

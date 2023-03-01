@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
   phoneStyle: {
     flexDirection: 'row',
   },
+  contactInput:{
+    flex:0.9
+  },
+  countryInput:{
+    flex:0.1
+  },
   formInput: {
     paddingHorizontal: 5,
     color: '#000000',
@@ -60,6 +66,22 @@ const styles = StyleSheet.create({
     paddingRight: 7,
     fontSize: 16,
     lineHeight: 18,
+  },
+  errorText: {
+    fontSize: 10,
+    color: 'red',
+    lineHeight: 15,
+  },
+  passwordElement: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  passwordInput: {
+    flex: 0.9,
+  },
+  passwordIcons: {
+    flex: 0.1,
   },
   formInputNumber: {
     fontSize: 18,

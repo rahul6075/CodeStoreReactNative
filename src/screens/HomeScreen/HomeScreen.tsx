@@ -114,7 +114,7 @@ export default function HomeScreen() {
             </Text>
             <View style={styles.cardsContainer}>
               {talentCardData.map(item => {
-                return <JobCard imageUrl={item.imageUrl} tag={item.tag} />;
+                return  <JobCard imageUrl={item.imageUrl} tag={item.tag} key={item.id} />;
               })}
             </View>
           </View>

@@ -13,7 +13,6 @@ class UserServices {
     }
   }
   public registerUser = async (payload: any) => {
-   
     let response = await this.axiosInstance.postRequest(
       httpsRoutes.USER_REGISTER_ROUTE,
       payload,
@@ -21,10 +20,14 @@ class UserServices {
     return response;
   };
   public getUser = async () => {
-    let response = await this.axiosInstance.getRequest(
-      httpsRoutes.GET_USER_ROUTE,
-    );
-    return response;
+    try {
+      let response = await this.axiosInstance.getRequest(
+        httpsRoutes.GET_USER_ROUTE,
+      );
+     return response;
+    } catch (err) {
+      console.log("eererer", err)
+    }
   };
 }
 

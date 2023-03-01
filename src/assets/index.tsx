@@ -14,3 +14,5 @@ export {default as SearchIcon} from './svgs/search.svg';
 export {default as LogoName} from '../assets/images/logoBlueName.svg';
 export {default as Logo} from '../assets/images/logoImgBlue.svg';
 export {default as LeftArrowIcon} from '../assets/images/arrowLeft.svg'
+export {default as ShowPasswordIcon} from '../assets/svgs/EyeOpen.svg'
+export {default as HidePasswordIcon} from '../assets/svgs/EyeClose.svg'
