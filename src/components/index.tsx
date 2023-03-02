@@ -12,6 +12,7 @@ export {default as ProfessionalCard} from './ProfessionalCard/ProfessionalCard'
 export {default as FilterModel} from './FilterModel/FilterModel'
 export {default as BottomSheetfilter} from './BottomSheetFilter/BottomSheetfilter'
 export {default as ToastMessage} from './ToastMessage/ToastMessage'
+export {default as StackScreenHeader} from './StackScreenHeader/StackScreenHeader'
 
 
 

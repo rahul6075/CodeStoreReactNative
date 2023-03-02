@@ -16,3 +16,5 @@ export {default as Logo} from '../assets/images/logoImgBlue.svg';
 export {default as LeftArrowIcon} from '../assets/images/arrowLeft.svg'
 export {default as ShowPasswordIcon} from '../assets/svgs/EyeOpen.svg'
 export {default as HidePasswordIcon} from '../assets/svgs/EyeClose.svg'
+export {default as PersonIcon} from '../assets/svgs/person-outline.svg'
+export {default as PasswordIcon} from '../assets/svgs/pasword.svg'

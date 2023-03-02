@@ -11,9 +11,9 @@ import {
   ChangePasswordScreen,
 } from '../screens/index';
 import CustomDrawerMenu from './CustomDrawerMenu';
-
+import {StackScreenHeader} from '../components';
 // Import Icons
-import PasswordIcon from '../assets/svgs/pasword.svg';
+import {PasswordIcon, NotificationIcon, PersonIcon} from '../assets';
 
 const Drawer = createDrawerNavigator<drawerParamList>();
 
@@ -55,7 +55,7 @@ const DrawerNavigation = () => {
         component={NotificationScreen}
         options={{
           drawerIcon() {
-            return <PasswordIcon width={20} height={20} />;
+            return <NotificationIcon width={20} height={20} />;
           },
         }}
       />
@@ -64,7 +64,7 @@ const DrawerNavigation = () => {
         component={ProfileScreen}
         options={{
           drawerIcon() {
-            return <PasswordIcon width={20} height={20} />;
+            return <PersonIcon width={20} height={20} />;
           },
         }}
       />
@@ -72,6 +72,10 @@ const DrawerNavigation = () => {
         name="ChangePassword"
         component={ChangePasswordScreen}
         options={{
+          headerShown: true,
+          header() {
+            return <StackScreenHeader title={'Create Project'} />;
+          },
           drawerIcon() {
             return <PasswordIcon width={20} height={20} />;
           },

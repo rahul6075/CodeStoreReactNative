@@ -9,7 +9,6 @@ export const axiosResponseInterceptors = () => {
       // Handle Errors
       let code = JSON.stringify(error.response.status);
       let payload = toastResponse.filter(item => item.code === Number(code));
-      console.log('stss', code);
       store.dispatch(setToastAlert(payload));
       return Promise.resolve();
     },

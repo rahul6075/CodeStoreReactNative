@@ -5,7 +5,7 @@ import styles from '../SignupScreen/SignupStyle';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../navigations/types';
 import {useNavigation} from '@react-navigation/native';
-import { changePasswordValidationSchema } from '../../utils/validations/authValidations';
+import {changePasswordValidationSchema} from '../../utils/validations/authValidations';
 //Import Svgs
 import {
   Logo,
@@ -26,11 +26,6 @@ const ChangePasswordScreen = () => {
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.leftArrowIcon}
-        onPress={() => navigation.goBack()}>
-        <LeftArrowIcon width={23} height={23} />
-      </TouchableOpacity>
       <Formik
         initialValues={{
           currentPassword: '',

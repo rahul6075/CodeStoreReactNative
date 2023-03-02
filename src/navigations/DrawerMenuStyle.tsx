@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   logout: {
-    color: '#00000',
+    color: '#000000',
     fontSize: 18,
     lineHeight: 22,
     fontWeight: '500',

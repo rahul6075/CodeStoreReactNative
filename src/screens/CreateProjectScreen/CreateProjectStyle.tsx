@@ -12,49 +12,38 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     borderRadius: 10,
   },
-  heading: {
-    color: '#05264E',
-    fontSize: 25,
-    lineHeight: 28,
-  },
-  photoContainer:{},
-  avatar:{
-    display:'flex',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-between'
-  },
-  uploadIcon: {
-    marginTop: 20,
-    marginBottom: 8,
-    paddingVertical: 20,
-    borderWidth: 2,
-    borderColor: '#A0ABB8',
-    borderStyle: 'dashed',
-    alignItems: 'center',
-    height: 80,
-    width: 80,
-  },
-  avatarImg: {
-    height: 85,
-    width: 85,
-    borderRadius: 50,
-    borderColor:'#A0ABB8',
-    borderWidth:1,
-    resizeMode: 'contain'
-  },
+
   formContainer: {
-    marginVertical: 15,
     borderColor: 'rgba(0, 0, 0, 0.1)',
-    borderTopWidth: 1,
-    paddingTop: 15,
   },
-  formElement: {},
+  formElement:{},
+  formElementCol: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems:'center'
+  },
+  colFirst: {
+    flex:0.59
+  },
+  colFirstSatrtDate:{
+    flex:0.5
+  },
+  colFirstEndDate:{
+    flex:0.5
+  },
+  colSecond: {
+    paddingLeft:5,
+    flex:0.4
+  },
   label: {
     color: '#05264E',
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: 19,
+    lineHeight: 25,
     paddingVertical: 5,
+  },
+  desc: {
+    marginVertical: 0,
+    paddingVertical: 0,
   },
   formInput: {
     borderColor: '#CCCCCC',
@@ -63,6 +52,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 5,
     paddingVertical: 1,
+  },
+  formInputCheck:{
+    borderColor: '#CCCCCC',
+    borderWidth: 1,
+    marginVertical: 2,
+    paddingVertical:10,
+     borderRadius: 5,
   },
   InputEle: {
     letterSpacing: 0.2,
@@ -74,6 +70,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginTop:5,
   },
   butttonElements: {
     display: 'flex',

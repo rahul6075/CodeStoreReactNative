@@ -1,26 +1,22 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  SafeAreaView,
-  ScrollView,
-} from 'react-native';
+import {View, Text, SafeAreaView, ScrollView} from 'react-native';
 import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigations/types';
 import styles from './MyProjectStyle';
 import {Header} from '../../components';
-import {MessageModel, Button, Profile} from '../../components/index';
+import {Button, Profile} from '../../components/index';
 
 // import icons
 import {FolderIcon} from '../../assets/index';
 
 const MyProjectScreen = () => {
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const openModel = () => {
-    setIsModalVisible(true);
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const onPress = () => {
+    navigation.navigate('CreateProject');
   };
-  const closeModel = () => {
-    setIsModalVisible(false);
-  };
+
   return (
     <SafeAreaView>
       <ScrollView>
@@ -46,25 +42,10 @@ const MyProjectScreen = () => {
                 Create a project to the marketplace and let talent come to you.
               </Text>
               <View style={styles.projectContainerBtn}>
-                <Button content="Create a Project" />
+                <Button content="Create a Project" onPress={onPress} />
               </View>
             </View>
           </View>
-
-          {/* <View style={styles.modelSection}>
-        <TouchableOpacity onPress={openModel}>
-          <Text>View Model</Text>
-        </TouchableOpacity>
-        {isModalVisible && (
-          <MessageModel
-            visibility={isModalVisible}
-            closeModel={closeModel}
-            modelType={1}
-            modelMessage={'Password reset successfully'}
-            buttonText={'Login'}
-          />
-        )}
-      </View> */}
         </View>
       </ScrollView>
     </SafeAreaView>

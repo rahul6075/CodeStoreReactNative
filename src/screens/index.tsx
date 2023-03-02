@@ -8,3 +8,4 @@ export {default as NotificationScreen} from './NotificationScreen/NotificationSc
 export {default as ProfessionalsScreen} from './PrefessionalsScreen/ProfessionalsScreen';
 export {default as ChangePasswordScreen} from './ChangePasswordScreen/ChangePasswordScreen';
 export {default as AddUpdateProfile} from './AddUpdateProfile/AddUpdateProfile';
+export {default as CreateProjectScreen} from './CreateProjectScreen/CreateProjectScreen';

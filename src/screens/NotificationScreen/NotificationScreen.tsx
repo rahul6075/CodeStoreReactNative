@@ -7,7 +7,7 @@ import {
   Pressable,
   FlatList,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './NotificationStyle';
 import {Header} from '../../components';
 
@@ -83,28 +83,41 @@ const NotificationScreen = () => {
         'Job application Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi qui necessitatibus dolore? Consequatur nesciunt enim assumenda asperiores odio quae deserunt, deleniti impedit blanditiis est beatae pariatur ea explicabo omnis!',
     },
   ];
+
+  const wait = (timeout: any) => {
+    // Defined the timeout function for testing purpose
+    return new Promise((resolve: any) => setTimeout(resolve, timeout));
+  };
+
+  const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
+
+  const onRefresh = React.useCallback(() => {
+    setIsRefreshing(true);
+    wait(2000).then(() => setIsRefreshing(false));
+  }, []);
+
   return (
     <SafeAreaView>
-      <ScrollView>
-        <View style={styles.container}>
-          <View style={styles.headerSection}>
-            <Header />
-          </View>
-          <View style={styles.content}>
-            <Text style={styles.pageHeading}>Notifications</Text>
-            <FlatList
-              data={notificationData}
-              renderItem={({item}) => (
-                <Item
-                  title={item.title}
-                  id={item.id}
-                  description={item.description}
-                />
-              )}
-            />
-          </View>
+      <View style={styles.container}>
+        <View style={styles.headerSection}>
+          <Header />
         </View>
-      </ScrollView>
+        <View style={styles.content}>
+          <Text style={styles.pageHeading}>Notifications</Text>
+          <FlatList
+            data={notificationData}
+            renderItem={({item}) => (
+              <Item
+                title={item.title}
+                id={item.id}
+                description={item.description}
+              />
+            )}
+            refreshing={isRefreshing}
+            onRefresh={onRefresh}
+          />
+        </View>
+      </View>
     </SafeAreaView>
   );
 };

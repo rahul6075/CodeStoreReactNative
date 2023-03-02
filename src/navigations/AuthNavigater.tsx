@@ -9,11 +9,13 @@ import {
   LoginScreen,
   UserVerifyScreen,
   AddUpdateProfile,
+  CreateProjectScreen
 } from '../screens';
 
 import {RootStackParamList} from './types';
 import DrawerNavigation from './DrawerNavigation';
-import { Header } from '../components';
+import { StackScreenHeader } from '../components';
+
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const AuthNavigater = () => {
@@ -48,7 +50,18 @@ const AuthNavigater = () => {
         component={AddUpdateProfile}
         name="AddupdateProfile"
         options={{ 
-          title: 'Company Profile',
+          header() {
+              return <StackScreenHeader title={'Create Profile'} />
+          },
+       }}
+      />
+      <RootStack.Screen
+        component={CreateProjectScreen}
+        name="CreateProject"
+        options={{ 
+           header() {
+               return <StackScreenHeader title={'Create Project'} />
+           },
         }}
       />
     </RootStack.Navigator>

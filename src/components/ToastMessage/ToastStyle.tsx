@@ -42,6 +42,9 @@ const styles = StyleSheet.create({
   },
   closeModelIcons: {
     flex: 0.1,
+    backgroundColor:'#D0DAFF',
+    padding:5,
+    borderRadius:50,
   },
 });
 
