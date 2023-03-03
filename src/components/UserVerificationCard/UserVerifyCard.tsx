@@ -1,5 +1,8 @@
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigations/types';
 import styles from './UserVerifyCardStyle';
 //Svgs Import
 import CardImg from '../../assets/svgs/cardImg1.svg';
@@ -9,6 +12,9 @@ interface userVerifyCardProps {
 }
 
 const UserVerifyCard: React.FC<userVerifyCardProps> = ({cardType}) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   return (
     <View style={styles.container}>
       <View style={styles.cardImage}>
@@ -68,7 +74,9 @@ const UserVerifyCard: React.FC<userVerifyCardProps> = ({cardType}) => {
           </View>
         </View>
       ) : (
-        <TouchableOpacity style={styles.profile}>
+        <TouchableOpacity
+          style={styles.profile}
+          onPress={() => navigation.navigate('AddupdateProfile')}>
           <Text style={[styles.profileBtn]}>Complete profile</Text>
         </TouchableOpacity>
       )}

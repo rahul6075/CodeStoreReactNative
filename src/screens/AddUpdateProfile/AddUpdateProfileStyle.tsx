@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 18,
-    marginVertical: 46,
+    marginHorizontal: 15,
+    marginVertical: 5,
     padding: 10,
     justifyContent: 'center',
     backgroundColor: '#fff',
@@ -16,13 +16,16 @@ const styles = StyleSheet.create({
     color: '#05264E',
     fontSize: 25,
     lineHeight: 28,
+    paddingLeft:20,
+    paddingTop:10,
+    marginVertical:10,
   },
-  photoContainer:{},
-  avatar:{
-    display:'flex',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-between'
+  photoContainer: {},
+  avatar: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   uploadIcon: {
     marginTop: 20,
@@ -39,9 +42,9 @@ const styles = StyleSheet.create({
     height: 85,
     width: 85,
     borderRadius: 50,
-    borderColor:'#A0ABB8',
-    borderWidth:1,
-    resizeMode: 'contain'
+    borderColor: '#A0ABB8',
+    borderWidth: 1,
+    resizeMode: 'contain',
   },
   formContainer: {
     marginVertical: 15,
@@ -74,6 +77,27 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  phoneStyle: {
+    flexDirection: 'row',
+  },
+  contactInput: {
+    flex: 0.9,
+  },
+  countryInput: {
+    flex: 0.1,
+  },
+  formInputNumber: {
+    fontSize: 18,
+    lineHeight: 20,
+    paddingHorizontal: 5,
+  },
+  formInputcode: {
+    borderRightWidth: 1,
+    borderRightColor: 'rgba(0, 0, 0, 0.1)',
+    paddingRight: 7,
+    fontSize: 16,
+    lineHeight: 18,
   },
   butttonElements: {
     display: 'flex',
