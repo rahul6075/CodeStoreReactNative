@@ -5,7 +5,8 @@ export type RootStackParamList = {
   Verify: undefined;
   Profile: undefined;
   AddupdateProfile: undefined | {userId: {}};
-  CreateProject:undefined | {userId: {}};
+  CreateProject: undefined | {userId: {}};
+  UpdateBusinessProfile: undefined | {userId: {}};
 };
 
 export type drawerParamList = {

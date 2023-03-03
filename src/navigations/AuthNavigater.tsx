@@ -9,7 +9,8 @@ import {
   LoginScreen,
   UserVerifyScreen,
   AddUpdateProfile,
-  CreateProjectScreen
+  CreateProjectScreen,
+  UpdateBusinessProfile
 } from '../screens';
 
 import {RootStackParamList} from './types';
@@ -52,6 +53,15 @@ const AuthNavigater = () => {
         options={{ 
           header() {
               return <StackScreenHeader title={'Create Profile'} />
+          },
+       }}
+      />
+      <RootStack.Screen
+        component={UpdateBusinessProfile}
+        name="UpdateBusinessProfile"
+        options={{ 
+          header() {
+              return <StackScreenHeader title={'Update Company Profile'} />
           },
        }}
       />

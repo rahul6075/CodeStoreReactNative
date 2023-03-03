@@ -19,7 +19,7 @@ const ProfileScreen = () => {
           <TouchableOpacity>
             <Text style={styles.profileButton}>Profile Details</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.profileEditIcon} onPress={() => navigation.navigate('AddupdateProfile')}>
+          <TouchableOpacity style={styles.profileEditIcon} onPress={() => navigation.navigate('UpdateBusinessProfile')}>
             <EditIcon width={23} height={23} />
           </TouchableOpacity>
         </View>

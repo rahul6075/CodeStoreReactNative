@@ -1,5 +1,5 @@
 export {default as HomeScreen} from './HomeScreen/HomeScreen';
-export {default as UserVerifyScreen} from './UserVerifyScreen/UserVerifyScreen'
+export {default as UserVerifyScreen} from './UserVerifyScreen/UserVerifyScreen';
 export {default as LoginScreen} from './LoginScreen/LoginScreen';
 export {default as SignupScreen} from './SignupScreen/SignupScreen';
 export {default as MyProjectScreen} from './MyProjectSecreen/MyProjectScreen';
@@ -9,3 +9,4 @@ export {default as ProfessionalsScreen} from './PrefessionalsScreen/Professional
 export {default as ChangePasswordScreen} from './ChangePasswordScreen/ChangePasswordScreen';
 export {default as AddUpdateProfile} from './AddUpdateProfile/AddUpdateProfile';
 export {default as CreateProjectScreen} from './CreateProjectScreen/CreateProjectScreen';
+export {default as UpdateBusinessProfile} from './AddUpdateProfile/UpdateBusinessProfile';

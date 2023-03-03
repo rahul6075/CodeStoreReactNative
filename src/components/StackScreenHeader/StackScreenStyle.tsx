@@ -2,31 +2,32 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor:'#fff',
     paddingVertical: 7,
+    paddingHorizontal:20,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent:'space-between',
+    borderBottomColor:'#eee',
+    borderBottomWidth:0.7,
+    elevation:5
   },
   pageHeader: {
-    flex: 0.8,
-    flexDirection: 'row',
-    alignItems: 'center',
   },
   heading: {
     color: '#05264E',
-    fontSize: 22,
+    fontSize: 16,
     lineHeight: 28,
-    paddingLeft: 10,
+    fontWeight:'600'
   },
   leftArrowIcon: {
     width: 43,
     height: 43,
-    padding: 10,
-    backgroundColor: '#F1F3F6',
-    borderRadius: 50,
+    paddingVertical: 10,
   },
   avatar: {
-    flex: 0.1,
+   
   },
   avatarImg: {
     width: 60,

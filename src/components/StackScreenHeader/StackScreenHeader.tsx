@@ -24,8 +24,8 @@ const StackScreenHeader: React.FC<headerProps> = ({title}) => {
           onPress={() => navigation.goBack()}>
           <LeftArrowIcon width={23} height={23} />
         </TouchableOpacity>
-        <Text style={styles.heading}>{title}</Text>
       </View>
+      <Text style={styles.heading}>{title}</Text>
       <Pressable
         style={styles.avatar}
         onPress={() => navigationDrawer.navigate('MyProfile')}>
